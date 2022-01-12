@@ -1,0 +1,354 @@
+.bounce,
+.flash,
+.pulse,
+.shake,
+.swing,
+.tada,
+.wobble,
+.bounceIn,
+.bounceInDown,
+.bounceInLeft,
+.bounceInRight,
+.bounceInUp,
+.bounceOut,
+.bounceOutDown,
+.bounceOutLeft,
+.bounceOutRight,
+.bounceOutUp,
+.fadeIn,
+.fadeInDown,
+.fadeInDownBig,
+.fadeInLeft,
+.fadeInLeftBig,
+.fadeInRight,
+.fadeInRightBig,
+.fadeInUp,
+.fadeInUpBig,
+.fadeOut,
+.fadeOutDown,
+.fadeOutDownBig,
+.fadeOutLeft,
+.fadeOutLeftBig,
+.fadeOutRight,
+.fadeOutRightBig,
+.fadeOutUp,
+.fadeOutUpBig,
+.flip,
+.flipInX,
+.flipInY,
+.flipOutX,
+.flipOutY,
+.lightSpeedIn,
+.lightSpeedOut,
+.rotateIn,
+.rotateInDownLeft,
+.rotateInDownRight,
+.rotateInUpLeft,
+.rotateInUpRight,
+.rotateOut,
+.rotateOutDownLeft,
+.rotateOutDownRight,
+.rotateOutUpLeft,
+.rotateOutUpRight,
+.slideInDown,
+.slideInLeft,
+.slideInRight,
+.slideOutLeft,
+.slideOutRight,
+.slideOutUp,
+.rollIn,
+.rollOut,
+.zoomIn,
+.zoomInDown,
+.zoomInLeft,
+.zoomInRight,
+.zoomInUp,
+.slideInUp {
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    visibility: visible!important;
+}
+
+
+/* --------------------------Header---------------------------- */
+
+#header .col-lg-2.col-md-3.top_bar_btn {
+    margin-top: 5px;
+}
+
+#header .logo img {
+    max-height: 123px;
+    width: auto;
+    height: 75px;
+}
+
+#header {
+    background-color: transparent;
+    width: 100%;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 5.7%;
+}
+
+.home #header {
+    position: absolute;
+    z-index: 99999;
+}
+
+.blog #header {
+    position: unset;
+    float: none;
+}
+
+@media screen and (max-width:767px) {
+    .right-quote i {
+        margin-top: -10%;
+    }
+}
+
+.t-info {
+    margin-right: 5%;
+}
+
+@media screen and (max-width:767px) {
+    .t-info {
+        margin-right: 9%;
+    }
+}
+
+@media (max-width: 1190px) {
+    #classes_prop .classes-meta {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1190px) {
+    .class_image {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.main_title h1:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #191919;
+    margin-top: 7px;
+}
+
+
+/*-------------- media section ---------------*/
+
+@media screen and (max-width:767px) {
+    #header .logo a.custom-logo-link {
+        position: static;
+    }
+    #home-slider-section .bx-wrapper .bx-controls-direction a {
+        display: none;
+    }
+    .contact-box .wpcf7 input[type="text"],
+    .contact-box .wpcf7 input[type="email"],
+    .contact-box .wpcf7 textarea {
+        width: 100% !important;
+    }
+    ol.carousel-indicators {
+        z-index: auto;
+    }
+    .header-contact-det {
+        top: 0;
+    }
+    .services-contents {
+        text-align: center;
+    }
+    #header .logo {
+        padding-top: 15px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    #header .logo img {
+        height: 45px;
+    }
+    #header {
+        width: 100%;
+        float: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .admission-process-head h2 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width:767px) {
+    #header .logo img {
+        height: 48px;
+    }
+    #header {
+        width: 100%;
+        float: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 320px) {
+    #header .logo img {
+        height: 28px;
+    }
+    #header {
+        width: 100%;
+        float: left;
+        background-size: cover;
+    }
+    .media-title {
+        width: 100%;
+        font-size: 18px !important;
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width:719px) {
+    .menubar.scrolled.hmenu {
+        background-color: #222222;
+        height: auto;
+    }
+    .contact-info {
+        margin: 0 !important;
+    }
+    .search-box {
+        float: none;
+    }
+    .menubar .nav ul li ul {
+        display: none;
+        z-index: 2;
+        font-weight: normal;
+    }
+    span {
+        text-align: right;
+    }
+}
+
+@media screen and (max-width:768px) {
+    #slider .inner_carousel {
+        padding: unset;
+    }
+    .top_social {
+        padding: 10px 0;
+        margin-left: 0;
+    }
+    .menubar {
+        position: relative;
+        right: 0;
+    }
+    #testimonials {
+        background-position: bottom;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:800px) {
+    #header .logo img {
+        height: 69px;
+        padding-top: 10px;
+    }
+    #header .logo {
+        margin-top: -10px!important;
+        position: relative!important;
+        left: 8%!important;
+    }
+}
+
+@media screen and (min-width: 801px) and (max-width:990px) {
+    #header .logo img {
+        height: 69px;
+        padding-top: 10px;
+    }
+    #header .logo {
+        margin-top: -10px!important;
+        position: relative!important;
+        left: -4%!important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:991px) {
+    #site_top .contact_details ul li span {
+        font-size: 12px;
+    }
+    #footer form.search-form input {
+        float: none;
+        border: 1px solid;
+        margin: 0 2px;
+        position: absolute;
+        top: -2%;
+        right: 1%;
+    }
+    #site_top .col-lg-8.col-md-8.col-sm-8.pl-0 {
+        margin-top: 9px;
+    }
+    #header .col-lg-2.col-md-3.top_bar_btn {
+        margin-top: 12px;
+    }
+    #header .logo img {
+        height: 69px;
+        padding-top: 10px;
+    }
+    #header .logo {
+        margin-top: -10px;
+    }
+    .position {
+        position: relative;
+    }
+    .scrolled .logo {
+        padding-bottom: 22px;
+    }
+    #services_prop h3 {
+        padding-top: 0;
+    }
+    .activities-contents ul li a {
+        padding: 12px 15px;
+        margin-right: 0px;
+        margin-left: 0px;
+        display: inline-block;
+    }
+    #footer input[type="submit"] {
+        right: 19%;
+    }
+    .rotated-half-circle i {
+        position: absolute;
+        right: 40%;
+        top: 30%;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width:992px) {
+    #our-services {
+        padding-top: 18%!important;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width:992px) {
+    #header .logo img {
+        height: 75px;
+        margin-left: 60px;
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 1025px) {
+    #header .logo img {
+        height: 75px;
+        margin-left: 60px;
+        padding-bottom: 10px;
+    }
+}
+
+.head_img {
+    padding: 13px;
+}

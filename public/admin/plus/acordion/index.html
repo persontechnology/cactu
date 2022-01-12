@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Accordion</title>
+  
+      <style>
+
+
+
+ul {
+  display: flex;
+  min-height: 100vh;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style-type: none;
+}
+
+li {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  padding: 20px;
+  background: #E74C3C;
+  cursor: pointer;
+  transition: all .5s ease;
+}
+li:hover {
+  background: #e53f2e;
+}
+li.active {
+  flex: 5;
+  background: #fff;
+  cursor: default;
+}
+li.active h2 {
+  color: #E74C3C;
+}
+li.active .section-content {
+  flex: 4;
+  opacity: 1;
+  transform: scaleX(1);
+  color: #E74C3C;
+}
+li .section-title {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: white;
+}
+li .section-title h2 {
+  margin: 0;
+  transform: rotate(-90deg);
+  white-space: nowrap;
+}
+li .section-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  transition: all .25s .1s ease-out;
+}
+
+    </style>
+
+</head>
+
+<body>
+  <ul>
+  <li>
+    <div class="section-title">
+      <h2>Section 1</h2>
+    </div>
+    <div class="section-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit voluptatum temporibus dicta reprehenderit tempore quisquam consequuntur porro omnis laboriosam praesentium at et sapiente, provident sit! Suscipit recusandae, ab ratione dignissimos.</p>
+    </div>
+  </li>
+  <li class="active">
+    <div class="section-title">
+      <h2>Section 2</h2>
+    </div>
+    <div class="section-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora totam delectus, eius nostrum aspernatur voluptas enim fugit ipsa magni voluptatem, odio sit accusamus vel id, commodi consequuntur possimus repellat necessitatibus!</p>
+    </div>
+  </li>
+  <li>
+    <div class="section-title">
+      <h2>Section 3</h2>
+    </div>
+    <div class="section-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur saepe vel facilis quae nihil ad aspernatur ex delectus. Tenetur nulla voluptates similique quos, quia possimus, magnam esse natus quis ipsa.</p>
+    </div>
+  </li>
+  <li>
+    <div class="section-title">
+      <h2>Section 4</h2>
+    </div>
+    <div class="section-content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, optio illo, delectus deleniti animi accusamus. Laboriosam maiores totam provident aliquam. Unde, incidunt amet officia a obcaecati, ducimus at molestiae nemo.</p>
+    </div>    
+  </li>
+</ul>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

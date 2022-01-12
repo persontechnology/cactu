@@ -1,0 +1,425 @@
+    .screenshot-image {
+        width: 150px;
+        height: 90px;
+        border-radius: 4px;
+        border: 2px solid whitesmoke;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        position: absolute;
+        bottom: 5px;
+        left: 10px;
+        background: white;
+    }
+    
+    @media (max-width:1680px) {
+        .display-cover {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin: 2% auto;
+            position: relative;
+        }
+        .display-cover1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70%;
+            background-image: url("/buzon/img/avatargrande.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin: 5% auto;
+            position: relative;
+        }
+    }
+    
+    @media (max-width:768px) and (max-width:1200px) {
+        .display-cover {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin: 2% auto;
+            position: relative;
+        }
+        .display-cover1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-image: url("/buzon/img/avatargrande.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin: 5% auto;
+            position: relative;
+        }
+    }
+    
+    @media (max-width:320px) and (max-width:480px) {
+        .display-cover {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin: 2% auto;
+            position: relative;
+        }
+        .display-cover1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-image: url("/buzon/img/avatargrande.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin: 5% auto;
+            position: relative;
+        }
+    }
+    
+    video {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.2);
+    }
+    
+    .video-options {
+        position: absolute;
+        left: 20px;
+        top: 30px;
+    }
+    
+    .controls {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        display: flex;
+    }
+    
+    .controls>a {
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        border-radius: 100%;
+        margin: 0 6px;
+        background: transparent;
+    }
+    
+    .controls>a:hover i {
+        color: white !important;
+    }
+    
+    @media (min-width: 300px) and (max-width: 400px) {
+        .controls {
+            flex-direction: column;
+        }
+        .controls a {
+            margin: 5px 0 !important;
+        }
+        .video-options {
+            position: absolute;
+            left: 5px;
+            top: 10px;
+            font-size: 10px;
+        }
+    }
+    
+    .controls>a>svg {
+        height: 20px;
+        width: 18px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+    }
+    
+    .controls a:nth-child(1) {
+        border: 2px solid #D2002E;
+    }
+    
+    .controls a:nth-child(1) svg {
+        color: #D2002E;
+    }
+    
+    .controls a:nth-child(2) {
+        border: 2px solid #008496;
+    }
+    
+    .controls a:nth-child(2) svg {
+        color: #008496;
+    }
+    
+    .controls a:nth-child(3) {
+        border: 2px solid #00B541;
+    }
+    
+    .controls a:nth-child(3) svg {
+        color: #00B541;
+    }
+    
+    .controls>a {
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        border-radius: 100%;
+        margin: 0 6px;
+        background: transparent;
+    }
+    
+    .controls>a:hover svg {
+        color: white;
+    }
+    /* camara dos */
+    
+    .screenshot-image1 {
+        width: 150px;
+        height: 90px;
+        border-radius: 4px;
+        border: 2px solid whitesmoke;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        position: absolute;
+        bottom: 5px;
+        left: 10px;
+        background: white;
+    }
+    
+    .display-cover1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-image: url("/buzon/img/avatargrande.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        margin: 5% auto;
+        position: relative;
+    }
+    
+    video>.video2 {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.2);
+    }
+    
+    .video-options1 {
+        position: absolute;
+        left: 20px;
+        top: 30px;
+    }
+    
+    .controls1 {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        display: flex;
+    }
+    
+    .controls1>a {
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        border-radius: 100%;
+        margin: 0 6px;
+        background: transparent;
+    }
+    
+    .controls1>a:hover i {
+        color: white !important;
+    }
+    
+    @media (min-width: 300px) and (max-width: 400px) {
+        .controls1 {
+            flex-direction: column;
+        }
+        .controls1 a {
+            margin: 5px 0 !important;
+        }
+        .video-options1 {
+            position: absolute;
+            left: 5px;
+            top: 10px;
+            font-size: 10px;
+        }
+    }
+    
+    .controls1>a>svg {
+        height: 20px;
+        width: 18px;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+    }
+    
+    .controls1 a:nth-child(1) {
+        border: 2px solid #D2002E;
+    }
+    
+    .controls1 a:nth-child(1) svg {
+        color: #D2002E;
+    }
+    
+    .controls1 a:nth-child(2) {
+        border: 2px solid #008496;
+    }
+    
+    .controls1 a:nth-child(2) svg {
+        color: #008496;
+    }
+    
+    .controls1 a:nth-child(3) {
+        border: 2px solid #00B541;
+    }
+    
+    .controls1 a:nth-child(3) svg {
+        color: #00B541;
+    }
+    
+    .controls1>a {
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        border-radius: 100%;
+        margin: 0 6px;
+        background: transparent;
+    }
+    
+    .controls1>a:hover svg {
+        color: white;
+    }
+    
+    label.error {
+        color: red;
+        font-size: 12px;
+        font-weight: normal;
+        margin-top: 0.5em;
+        width: 100%;
+        float: none;
+    }
+    
+    @media screen and (orientation: portrait) {
+        label.error {
+            margin-left: 0;
+            display: block;
+        }
+    }
+    
+    @media screen and (orientation: landscape) {
+        label.error {
+            display: inline-block;
+            margin-left: 5%;
+        }
+    }
+    
+    em {
+        color: red;
+        font-weight: bold;
+        padding-right: .25em;
+    }
+    
+    .paper:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 25px;
+        background: radial-gradient(#575450 6px, transparent 7px) repeat-y;
+        background-size: 30px 30px;
+        border-right: 3px solid #D44147;
+        box-sizing: border-box;
+    }
+    
+    .paper-content {
+        position: absolute;
+        top: 30px;
+        right: 0;
+        bottom: 30px;
+        left: 30px;
+        background: linear-gradient(transparent, transparent 28px, #91D1D3 28px);
+        background-size: 30px 30px;
+    }
+    
+    .paper-content textarea {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: 100%;
+        line-height: 30px;
+        padding: 0 10px;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        color: rgb(53, 121, 199);
+        font-family: 'Handlee', cursive;
+        font-weight: bold;
+        font-size: 18px;
+        box-sizing: border-box;
+        z-index: 1;
+    }
+    
+    @media (max-width:1680px) {
+        .paper {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            margin: 0 auto;
+            background: #fafafa;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+            overflow: hidden;
+        }
+    }
+    
+    @media (max-width:1200px) {
+        .paper {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            margin: 0 auto;
+            background: #fafafa;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+            overflow: hidden;
+        }
+    }
+    
+    @media (max-width:768px) {
+        .paper {
+            position: relative;
+            width: 100%;
+            height: 470px;
+            margin: 0 auto;
+            background: #fafafa;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+            overflow: hidden;
+        }
+    }
+    
+    @media (max-width:480px) {
+        .paper {
+            position: relative;
+            width: 100%;
+            height: 490px;
+            margin: 0 auto;
+            background: #fafafa;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+            overflow: hidden;
+        }
+    }
+    
+    @media (max-width:320px) {
+        .paper {
+            position: relative;
+            width: 100%;
+            height: 550px;
+            margin: 0 auto;
+            background: #fafafa;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+            overflow: hidden;
+        }
+    }
