@@ -739,7 +739,7 @@ class Misparticipantes extends Controller
         CURLOPT_TIMEOUT => 30,
         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
         CURLOPT_CUSTOMREQUEST => "POST",
-        CURLOPT_POSTFIELDS => "token=".$ULTRAMSG_API_TOKEN."&to="+$numero+"&body=".$mensaje."&priority=1&referenceId=",
+        CURLOPT_POSTFIELDS => "token=".$ULTRAMSG_API_TOKEN."&to=".$numero."&body=".$mensaje."&priority=1&referenceId=",
         CURLOPT_HTTPHEADER => array(
           "content-type: application/x-www-form-urlencoded"
         ),
