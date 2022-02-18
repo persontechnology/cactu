@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'chat_api' => env('CHAT_API', ''),
-    'nexmo_user'=>env('NEXMO_USER',''),
-    'nexmo_id'=>env('NEXMO_ID')
+    'ULTRAMSG_API_URL'=>env('ULTRAMSG_API_URL'),
+    'ULTRAMSG_API_ID'=>env('ULTRAMSG_API_ID'),
+    'ULTRAMSG_API_TOKEN'=>env('ULTRAMSG_API_TOKEN')
 ];

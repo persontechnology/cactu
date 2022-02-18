@@ -713,59 +713,51 @@ class Misparticipantes extends Controller
       
       // enviar por watsapp al representante
       if($user->familia->otro2){
-          // $this->enviarMensajeWhastApp($user->familia->otro2,$msg_was);
-          $this->enviarMensajeTexto($user->familia->otro2,$msg_was);
+          $this->enviarMensajeWhastApp($user->familia->otro2,$msg_was);
       }
 
       // enviar por wastapp al niño
       if($user->celular){
-        // $this->enviarMensajeWhastApp($user->celular,$msg_was);
-        $this->enviarMensajeTexto($user->celular,$msg_was);
+        $this->enviarMensajeWhastApp($user->celular,$msg_was);
       }
 
     }
 
     public function enviarMensajeWhastApp($numero,$mensaje)
     {
-      try {
-          
-        $data_n = [
-            'phone' => $numero, 
-            'body' => $mensaje,
-        ];
-        $json_n = json_encode($data_n);
+      $ULTRAMSG_API_URL=config('chatapi.ULTRAMSG_API_URL');
+      $ULTRAMSG_API_ID=config('chatapi.ULTRAMSG_API_ID');
+      $ULTRAMSG_API_TOKEN=config('chatapi.ULTRAMSG_API_TOKEN');
+    
+      $curl = curl_init();
 
-        $options_n = stream_context_create(['http' => [
-                'method'  => 'POST',
-                'header'  => 'Content-type: application/json',
-                'content' => $json_n
-            ]
-        ]);
+      curl_setopt_array($curl, array(
+        CURLOPT_URL => $ULTRAMSG_API_URL.$ULTRAMSG_API_ID."/messages/chat",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "POST",
+        CURLOPT_POSTFIELDS => "token=".$ULTRAMSG_API_TOKEN."&to="+$numero+"&body=".$mensaje."&priority=1&referenceId=",
+        CURLOPT_HTTPHEADER => array(
+          "content-type: application/x-www-form-urlencoded"
+        ),
+      ));
 
-        $url_was_api=config('chatapi.chat_api');
+      $response = curl_exec($curl);
+      $err = curl_error($curl);
 
-        file_get_contents($url_was_api, false, $options_n);
-        
-      } catch (\Throwable $th) {
-        
+      curl_close($curl);
+
+      if ($err) {
+        return false;
+      } else {
+        return true;
       }
-    }
-    public function enviarMensajeTexto($numero,$mensaje)
-    {
-      // enviar por mensaje
-      try {
-        $basic  = new \Vonage\Client\Credentials\Basic(config('chatapi.nexmo_user'),config('chatapi.nexmo_id'));
-        $client = new \Vonage\Client($basic);
-        $response = $client->sms()->send(
-            new \Vonage\SMS\Message\SMS($numero, 'CACTU: ', $mensaje)
-        );
-        $message = $response->current();
-      } catch (\Throwable $th) {
-        //throw $th;
-      }
-      
-    }
 
+    }
+    
 
     function eliminarCartaTotal (Request $request){
       $validatedData = $request->validate([   

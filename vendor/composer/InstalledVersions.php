@@ -25,12 +25,12 @@ class InstalledVersions
     private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '45b975e8f03477871b163a93465ef59cbcf5b0cd',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -70,15 +70,6 @@ class InstalledVersions
       array (
       ),
       'reference' => 'ca57d18f028f84f777b2168cd1911b0dee2343ae',
-    ),
-    'composer/package-versions-deprecated' => 
-    array (
-      'pretty_version' => '1.11.99.4',
-      'version' => '1.11.99.4',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'b174585d1fe49ceed21928a945138948cb394600',
     ),
     'cordoval/hamcrest-php' => 
     array (
@@ -192,24 +183,6 @@ class InstalledVersions
       array (
       ),
       'reference' => '848d8125239d7dbf8ab25cb7f054f1a630e68c2e',
-    ),
-    'guzzlehttp/guzzle' => 
-    array (
-      'pretty_version' => '7.4.1',
-      'version' => '7.4.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'ee0a041b1760e6a53d2a39c8c34115adc2af2c79',
-    ),
-    'guzzlehttp/promises' => 
-    array (
-      'pretty_version' => '1.5.1',
-      'version' => '1.5.1.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'fe752aedc9fd8fcca3fe7ad05d419d32998a06da',
     ),
     'guzzlehttp/psr7' => 
     array (
@@ -475,15 +448,6 @@ class InstalledVersions
         0 => '*',
       ),
     ),
-    'laminas/laminas-diactoros' => 
-    array (
-      'pretty_version' => '2.8.0',
-      'version' => '2.8.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '0c26ef1d95b6d7e6e3943a243ba3dc0797227199',
-    ),
     'laravel/framework' => 
     array (
       'pretty_version' => 'v7.30.6',
@@ -495,12 +459,12 @@ class InstalledVersions
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '45b975e8f03477871b163a93465ef59cbcf5b0cd',
     ),
     'laravel/sanctum' => 
     array (
@@ -546,24 +510,6 @@ class InstalledVersions
       array (
       ),
       'reference' => '2224e3db7ec399952523b0769a7677de0b6afd8b',
-    ),
-    'lcobucci/clock' => 
-    array (
-      'pretty_version' => '2.0.0',
-      'version' => '2.0.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '353d83fe2e6ae95745b16b3d911813df6a05bfb3',
-    ),
-    'lcobucci/jwt' => 
-    array (
-      'pretty_version' => '4.1.5',
-      'version' => '4.1.5.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'fe2d89f2eaa7087af4aa166c6f480ef04e000582',
     ),
     'league/commonmark' => 
     array (
@@ -703,13 +649,6 @@ class InstalledVersions
       array (
       ),
       'reference' => '7c125dc2463f3e144ddc7e05e63077109508c94e',
-    ),
-    'ocramius/package-versions' => 
-    array (
-      'replaced' => 
-      array (
-        0 => '1.11.99',
-      ),
     ),
     'opis/closure' => 
     array (
@@ -886,13 +825,6 @@ class InstalledVersions
       array (
       ),
       'reference' => '2dfb5f6c5eff0e91e20e913f8c5452ed95b86621',
-    ),
-    'psr/http-client-implementation' => 
-    array (
-      'provided' => 
-      array (
-        0 => '1.0',
-      ),
     ),
     'psr/http-factory' => 
     array (
@@ -1440,33 +1372,6 @@ class InstalledVersions
       array (
       ),
       'reference' => '80953678b19901e5165c56752d087fc11526017c',
-    ),
-    'vonage/client' => 
-    array (
-      'pretty_version' => '2.4.0',
-      'version' => '2.4.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '29f23e317d658ec1c3e55cf778992353492741d7',
-    ),
-    'vonage/client-core' => 
-    array (
-      'pretty_version' => '2.10.0',
-      'version' => '2.10.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'abd4047c0944416d497884f4c3c8db7a52876198',
-    ),
-    'vonage/nexmo-bridge' => 
-    array (
-      'pretty_version' => '0.1.0',
-      'version' => '0.1.0.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '62653b1165f4401580ca8d2b859f59c968de3711',
     ),
     'webmozart/assert' => 
     array (
