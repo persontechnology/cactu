@@ -46,7 +46,7 @@ Route::middleware(['verified', 'auth'])->group(function () {
  
     Route::get('/mi-perfil', 'HomeController@miPerfil')->name('miPerfil');
     Route::post('/mi-perfil-actualizar', 'HomeController@miPerfilActualizar')->name('actualizarMiPerfil');
-  
+    
     
 
     // soporte de sistema del sistema 

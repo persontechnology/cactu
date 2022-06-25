@@ -63,6 +63,7 @@ class Buzones extends Controller
             // }
             // $buzones=$buzon->buzonCartasNinio()->where('estado','!=','Respondida')->wherePivot('id','!=',$idCartade)->get();                        
             $data = array('buzonCarta'=> $buzonCarta);
+            
             return view('cartas.respuest',$data);
             // return view('buzon.respuesta.main',$data);
         } catch (DecryptException $e) {

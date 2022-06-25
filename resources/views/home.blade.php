@@ -25,6 +25,10 @@
           </p>
           <hr>
           {{ date('Y') }}
+          <hr>
+          <small>
+            {{ app()->version()}}
+          </small>
           
         </div>
       </div>

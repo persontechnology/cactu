@@ -11,13 +11,11 @@ class Buzon extends Model
     
     public function buzonCartas()
     {
-        return $this->belongsToMany(TipoCarta::class,'buzon_cartas','buzon_id','tipo_cartas_id')
-        ->as('cartasBuzon')->withPivot(['id','archivo','estado','imagen','imagen2','respuesta','buzon_id','tipo_cartas_id','created_at','updated_at']);
+        return $this->belongsToMany(TipoCarta::class,'buzon_cartas','buzon_id','tipo_cartas_id')->as('cartasBuzon')->withPivot(['id','archivo','estado','imagen','imagen2','respuesta','buzon_id','tipo_cartas_id','created_at','updated_at']);
     }
     public function buzonCartasNinio()
     {
-        return $this->belongsToMany(TipoCarta::class,'buzon_cartas','buzon_id','tipo_cartas_id')
-        ->as('cartasBuzon')->withPivot(['id','archivo','estado','imagen','imagen2','respuesta','buzon_id','tipo_cartas_id','created_at','updated_at']);
+        return $this->belongsToMany(TipoCarta::class,'buzon_cartas','buzon_id','tipo_cartas_id')->as('cartasBuzon')->withPivot(['id','archivo','estado','imagen','imagen2','respuesta','buzon_id','tipo_cartas_id','created_at','updated_at']);
         // ->wherePivot('estado','!=','Respondida');
     }
     public function ninio()

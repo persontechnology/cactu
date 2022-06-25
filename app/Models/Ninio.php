@@ -3,6 +3,7 @@
 namespace cactu\Models;
 
 use cactu\Models\Buzon\Buzon;
+use cactu\Models\Buzon\BuzonCarta;
 use Illuminate\Database\Eloquent\Model;
 use cactu\Models\Localidad\Comunidad;
 use cactu\Models\Familia;
@@ -11,10 +12,13 @@ use cactu\Models\TipoParticipante;
 use cactu\User;
 use Carbon\Carbon;
 use cactu\Models\Buzon\MensajeNinio;
-
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
 
 class Ninio extends Model
 {
+    use HasApiTokens,Notifiable;
+    
     protected $table = 'ninio';
 
     protected $fillable = [
@@ -89,6 +93,20 @@ class Ninio extends Model
     public function mensajesNinio()
     {
         return $this->hasMany(MensajeNinio::class,'ninio_id')->orderBy('fecha','desc');
+    }
+
+    // Deivid, cartas de ninios
+    // ninio->buzon->buzoncartas
+    public function buzonCartasNinioDirecto()
+    {
+        return $this->hasManyThrough(
+            BuzonCarta::class,
+            Buzon::class,
+            'ninio_id', // Foreign key on the ninio table...
+            'buzon_id', // Foreign key on the buzon carta table...
+            'id', // Local key on the ninio table...
+            'id' // Local key on the buzon table...
+        );
     }
 
 }

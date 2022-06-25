@@ -5,7 +5,7 @@
 
 @if($buzonCarta->buzon->estado=='Respondida' || $buzonCarta->estado=='Respondida')
     <div class="alert alert-primary" role="alert">
-        <strong>Cara ya fue respondida</strong>
+        <strong>Carta ya fue respondida</strong>
     </div>
 @else
     @if ($edad>5)    
