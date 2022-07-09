@@ -12,27 +12,31 @@ use Carbon\Carbon;
 
 
 Route::post('/login',function(Request $request){
-    $request->validate([
-        'numero_child' => 'required|string|max:255'
-    ]);    
-
-    $ninio = Ninio::where('numeroChild', $request->numero_child)->first();
-
-    if (!$ninio) {
-        throw ValidationException::withMessages(['Número clild no se encuentra en nuestro sistema']);
+    try {
+        $request->validate([
+            'numero_child' => 'required|string|max:255'
+        ]);    
+    
+        $ninio = Ninio::where('numeroChild', $request->numero_child)->first();
+    
+        if (!$ninio) {
+            throw ValidationException::withMessages(['Número clild no se encuentra en nuestro sistema']);
+        }
+        
+        $tk=$ninio->createToken($ninio->numeroChild)->plainTextToken;
+        
+        $data = array(
+            'message'=>'ok',
+            'id'=>$ninio->id,
+            'numero_child' => $ninio->numeroChild,
+            'nombres'=>$ninio->nombres,
+            'token'=>$tk,
+            'roles_permisos'=>[]
+        );
+        return response()->json($data);
+    } catch (\Throwable $th) {
+        return response()->json($th);
     }
-    
-    $tk=$ninio->createToken($ninio->numeroChild)->plainTextToken;
-    
-    $data = array(
-        'message'=>'ok',
-        'id'=>$ninio->id,
-        'numero_child' => $ninio->numeroChild,
-        'nombres'=>$ninio->nombres,
-        'token'=>$tk,
-        'roles_permisos'=>[]
-    );
-    return response()->json($data);
 });
 
 
