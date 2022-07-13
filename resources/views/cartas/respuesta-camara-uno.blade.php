@@ -1,14 +1,10 @@
-   {{-- @if ($buzonCarta->buzon->estado == 'Respondida' || $buzonCarta->estado == 'Respondida')
+   @if ($buzonCarta->buzon->estado == 'Respondida' || $buzonCarta->estado == 'Respondida')
     <div class="alert alert-primary" role="alert">
         <strong>Esta carta ya fue respondida</strong>
     </div>
-@else --}}
+@else
    <div>
-       @if ($buzonCarta->tipoCarta->nombre == 'Contestación')
-           <div class="tab-pane" id="justified-icon-only-tab2">
-               @include('cartas.vistapdf', $buzonCarta)
-           </div>
-       @endif
+       
        <p style="float: right">Ecuador {{ \Carbon\Carbon::parse(now())->format('d/M/Y') }} </p>
        <p>Mínimo: 400, Máximo: 680 caracteres.</p>
        <form action="{{ route('registroDeotrasCartas') }}" method="POST" id="formularioContestacion"
@@ -25,8 +21,14 @@
 
            <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Enviar carta</button>
        </form>
+
+       @if ($buzonCarta->tipoCarta->nombre == 'Contestación')
+           <div class="tab-pane" id="justified-icon-only-tab2">
+               @include('cartas.vistapdf', $buzonCarta)
+           </div>
+       @endif
    </div>
-   {{-- @endif --}}
+   @endif
 
    <script src="{{ asset('js/app.js') }}"></script>
 
